@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simmi Thapad | Official Music</title>
+  <meta name="description" content="Listen to Aawargi and Mera Safar by Simmi Thapad across all streaming platforms." />
+
+  <!-- Meta Pixel Base Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    fbq('init', '2171051010206840');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2171051010206840&ev=PageView&noscript=1"
+    />
+  </noscript>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <main class="container">
+    <!-- Artist Header -->
+    <header class="artist-bar">
+      <img id="artistAvatar" src="" alt="" class="artist-avatar" />
+      <span id="artistTagline"></span>
+    </header>
+
+    <!-- 3D Cover Flow Stage -->
+    <section class="coverflow-stage" id="coverflowStage" aria-label="Song releases"></section>
+
+    <!-- Floating Glass Player Bar -->
+    <section class="glass-player" aria-label="Audio controls">
+      <div class="player-controls">
+        <button type="button" class="ctrl-btn" id="prevBtn" aria-label="Previous song">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z"/></svg>
+        </button>
+
+        <button type="button" class="ctrl-btn play-main" id="playBtn" aria-label="Play song">
+          <svg id="playIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pauseIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+
+        <button type="button" class="ctrl-btn" id="nextBtn" aria-label="Next song">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/></svg>
+        </button>
+      </div>
+
+      <div class="now-playing-chip">
+        <img id="npCover" src="" alt="" />
+        <div class="now-playing-text">
+          <div class="np-title" id="npTitle"></div>
+          <div class="np-artist" id="npSub"></div>
+        </div>
+      </div>
+    </section>
+
+    <audio id="audioPreview" preload="none"></audio>
+
+    <!-- 1-Tap Streaming Grid -->
+    <div class="stream-label">Stream <span id="activeSongLabel"></span> in 1 tap</div>
+    <nav class="stream-grid" id="streamGrid" aria-label="Streaming platforms"></nav>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> <span id="footerName"></span>
+  </footer>
+
+  <!-- ES Modules for clean separation -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
